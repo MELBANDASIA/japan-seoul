@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Japan &amp; Seoul Trip</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Serif+JP:wght@400&family=Noto+Serif+KR:wght@400&family=Figtree:wght@400;500;600;700&display=swap">
+<style>/* Layout: one pink ladder, light to dark. Serif display over a plain sans; a dated rail for the days, photo cards for villas, quiet rows for everything else. */
+:root{
+  --blush:#FFF7FA; --petal:#FDE2EA; --rose:#F9C6D6; --pink:#F28DB2; --hot:#D6457F; --berry:#8E1550; --ink:#5A0F33; --line:#F3B6CB; --white:#FFFFFF;
+  --display:"Instrument Serif","Iowan Old Style",Georgia,serif;
+  --body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--petal);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.55;margin:0}
+.wrap{max-width:70rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+a{color:var(--berry);text-underline-offset:.18em;text-decoration-thickness:.07em}
+a:hover{color:var(--hot)}
+a:focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:.2rem}
+h1,h2,h3,h4,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+
+.hero{background:var(--berry);color:var(--white);padding-block:clamp(2.5rem,7vw,4.5rem) clamp(2rem,5vw,3rem)}
+.eyebrow{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--rose)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(3.2rem,11vw,7rem);line-height:.95;margin-block:.5rem 1rem;text-wrap:balance}
+h1 em{color:var(--pink)}
+.lede{max-width:38rem;font-size:1.1rem;color:var(--petal)}
+.flights{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin-top:1.8rem;max-width:44rem}
+.flights div{border:1px solid var(--hot);border-radius:1rem;padding:.9rem 1.1rem;background:var(--ink)}
+.flights dt{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rose)}
+.flights dd{font-family:var(--display);font-size:1.9rem;line-height:1.15;color:var(--white)}
+.flights dd.sub{font-family:var(--body);font-size:.88rem;line-height:1.4;color:var(--petal);margin-top:.2rem}
+.swatch{display:flex;margin-top:2rem;height:.9rem;border-radius:1rem;overflow:hidden;max-width:24rem}
+.swatch i{flex:1}
+.swatch i:nth-child(1){background:var(--blush)}.swatch i:nth-child(2){background:var(--petal)}.swatch i:nth-child(3){background:var(--rose)}
+.swatch i:nth-child(4){background:var(--pink)}.swatch i:nth-child(5){background:var(--hot)}.swatch i:nth-child(6){background:var(--ink)}
+
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--blush);border-bottom:1px solid var(--line)}
+.navin{display:flex;gap:.4rem;overflow-x:auto;padding-block:.6rem;scrollbar-width:thin}
+.nav a{flex:none;text-decoration:none;font-weight:600;font-size:.9rem;padding:.4rem .85rem;border-radius:2rem;background:var(--petal);color:var(--berry);border:1px solid var(--line)}
+.nav a:hover{background:var(--berry);color:var(--white);border-color:var(--berry)}
+
+main{display:flex;flex-direction:column;gap:clamp(3rem,7vw,5rem);padding-block:clamp(2.5rem,6vw,4rem)}
+section{scroll-margin-top:4.5rem;display:flex;flex-direction:column;gap:1.1rem;min-width:0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.05;color:var(--berry);text-wrap:balance}
+.intro{max-width:44rem}
+.band{font-family:var(--body);font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--berry);background:var(--rose);padding:.5rem .9rem;border-radius:.4rem;margin-top:.8rem}
+
+/* days */
+.days{display:flex;flex-direction:column;gap:.9rem}
+.day{display:grid;grid-template-columns:4.6rem minmax(0,1fr);gap:1rem;background:var(--blush);border:1px solid var(--line);border-radius:1rem;padding:1rem}
+.date{display:flex;flex-direction:column;align-items:center;justify-content:center;align-self:start;background:var(--hot);color:var(--white);border-radius:.8rem;padding:.55rem .2rem;font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;line-height:1.2}
+.date b{font-family:var(--display);font-weight:400;font-size:2.3rem;line-height:1;letter-spacing:0}
+.dbody{display:flex;flex-direction:column;gap:.6rem;min-width:0}
+.day h3{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.1;color:var(--berry)}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem 1.4rem}
+.parts dt{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--hot);margin-bottom:.15rem}
+
+/* villas */
+.villas{display:grid;grid-template-columns:repeat(auto-fill,minmax(17.5rem,1fr));gap:1.2rem}
+.villa{display:flex;flex-direction:column;background:var(--blush);border:1px solid var(--line);border-radius:1rem;overflow:hidden;min-width:0}
+.pic{display:block;aspect-ratio:3/2;background:var(--rose);max-width:100%}
+.pic img{display:block;width:100%;height:100%;object-fit:cover}
+.ph{font-family:var(--display),"Noto Serif JP","Noto Serif KR",serif;display:grid;place-items:center;width:100%;height:100%;font-family:var(--display);font-size:1.6rem;color:var(--berry);background:linear-gradient(135deg,var(--petal),var(--pink))}
+.vbody{display:flex;flex-direction:column;gap:.6rem;padding:1rem;flex:1}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;min-height:1.5rem}
+.tag{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .55rem;border-radius:2rem}
+.tag.fav{background:var(--rose);color:var(--berry)}
+.tag.over{background:var(--ink);color:var(--white)}
+.villa h3{font-size:1.05rem;line-height:1.3;font-weight:700}
+.price{font-variant-numeric:tabular-nums}
+.price strong{font-family:var(--display);font-weight:400;font-size:1.9rem;color:var(--berry);line-height:1}
+.price span{display:block;font-size:.88rem}
+.villa dl{display:grid;gap:.25rem;font-size:.9rem}
+.villa dl div{display:grid;grid-template-columns:4.2rem minmax(0,1fr);gap:.5rem}
+.villa dt{font-weight:700;color:var(--hot)}
+.note{font-size:.9rem}
+.btn{margin-top:auto;align-self:flex-start;text-decoration:none;font-weight:700;background:var(--berry);color:var(--white);padding:.55rem 1rem;border-radius:2rem}
+.btn:hover{background:var(--hot);color:var(--white)}
+
+/* rows */
+.rows{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:1rem;background:var(--blush);overflow:hidden}
+.rows>li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,15rem);gap:.4rem 1.5rem;padding:.9rem 1rem;border-top:1px solid var(--line)}
+.rows>li:first-child{border-top:0}
+.rmain{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.rows h4{font-size:1.05rem;font-weight:700;line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:.15rem .9rem;font-size:.86rem;color:var(--berry)}
+.meta span+span::before{content:"";display:inline-block;width:.3rem;height:.3rem;border-radius:50%;background:var(--pink);margin-right:.9rem;vertical-align:middle}
+.sel{user-select:all;white-space:pre-line}
+.cost{font-weight:700;color:var(--berry);font-variant-numeric:tabular-nums;text-align:right;font-size:.95rem}
+
+/* budget */
+.totals{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.8rem}
+.totals li{display:flex;flex-direction:column;gap:.2rem;background:var(--blush);border:1px solid var(--line);border-radius:1rem;padding:.9rem 1rem}
+.totals span{font-size:.85rem;font-weight:600}
+.totals b{font-family:var(--display);font-weight:400;font-size:2.2rem;line-height:1;color:var(--berry);font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:1rem;background:var(--blush)}
+table{border-collapse:collapse;width:100%;min-width:32rem;font-variant-numeric:tabular-nums}
+th,td{padding:.6rem 1rem;text-align:right;border-top:1px solid var(--line);vertical-align:top}
+thead th{background:var(--hot);color:var(--white);border-top:0;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+th:first-child{text-align:left}
+tbody th{font-weight:600}
+tbody th small{display:block;font-weight:400;font-size:.82rem;color:var(--berry)}
+tfoot th,tfoot td{background:var(--rose);font-weight:700;color:var(--berry)}
+
+.money{background:var(--berry);color:var(--white);border-radius:1.2rem;padding:clamp(1.3rem,4vw,2.2rem)}
+.money h2{color:var(--rose)}
+.money .big{font-family:var(--display);font-size:clamp(1.5rem,4vw,2.1rem);line-height:1.2;max-width:40rem}
+.money p{max-width:44rem}
+.money a{color:var(--white)}
+.money a:focus-visible{outline-color:var(--white)}
+.foot{padding-block:0 3rem;font-size:.85rem}
+
+@media (max-width:40rem){
+  .rows>li{grid-template-columns:minmax(0,1fr)}
+  .cost{text-align:left}
+  .day{grid-template-columns:3.6rem minmax(0,1fr);gap:.8rem;padding:.8rem}
+  .date b{font-size:1.9rem}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* photo cards for places */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:1.1rem}
+.card{display:flex;flex-direction:column;background:var(--blush);border:1px solid var(--line);border-radius:1rem;overflow:hidden;min-width:0}
+.cbody{display:flex;flex-direction:column;gap:.4rem;padding:.9rem 1rem 1rem;min-width:0}
+.card h4{font-size:1.05rem;font-weight:700;line-height:1.3}
+.card .cost{text-align:left}
+.card p{font-size:.92rem}
+.card .meta{flex-direction:column;gap:.1rem}
+.card .meta span+span::before{display:none}
+.mono{font-size:4rem}
+
+/* entry steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));gap:1.1rem;counter-reset:step}
+.steps li{counter-increment:step;display:flex;flex-direction:column;gap:.6rem;background:var(--blush);border:1px solid var(--line);border-radius:1rem;padding:1.1rem;min-width:0}
+.steps .when{align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--hot);color:var(--white);padding:.25rem .7rem;border-radius:2rem}
+.steps h3{font-family:var(--display);font-weight:400;font-size:1.55rem;line-height:1.15;color:var(--berry)}
+.steps h3::before{content:counter(step) ". "}
+.steps p{font-size:.95rem}
+
+/* crew */
+.crewgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:1.1rem;align-items:start}
+.crew{display:flex;flex-direction:column;background:var(--blush);border:1px solid var(--line);border-radius:1rem;overflow:hidden;min-width:0}
+.crew img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.crew.duo img{aspect-ratio:4/3}
+.crew h3{font-family:var(--display);font-weight:400;font-size:1.6rem;line-height:1.1;color:var(--berry)}
+.crew p{font-size:.95rem}
+.crew .role{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hot)}
+.crew.star h3{font-size:2.1rem}
+.crewgrid.duos{grid-template-columns:repeat(auto-fill,minmax(17rem,1fr))}
+
+.ph{font-family:"Instrument Serif","Noto Serif JP","Noto Serif KR",Georgia,serif;font-size:1.6rem;text-align:center;padding:1rem}
+.ph.mono{font-size:clamp(2.4rem,7vw,3.4rem);letter-spacing:.04em}
+.days+.band{margin-top:1.4rem}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<p class="eyebrow">Wed 25 Nov to Tue 29 Dec 2026</p>
+<h1>Japan &amp; <em>Seoul</em></h1>
+<p class="lede">Five weeks on my own. A week in Melbourne, then Tokyo, a riverside ryokan in Kinugawa Onsen, Kyoto with a day in Kanazawa, and Christmas in Seoul. Every flight is paid. Tap any name to open it in Google Maps.</p>
+<dl class="flights">
+<div>
+<dt>Off to Melbourne</dt>
+<dd>11:55 pm, Wed 25 Nov</dd>
+<dd class="sub">JQ971 from Perth T2, landing Melbourne T4 at 6:30 am</dd>
+</div>
+<div>
+<dt>Into Tokyo</dt>
+<dd>Tue 1 Dec</dd>
+<dd class="sub">JQ34 + JQ25 from Melbourne via Cairns, landing Narita T3</dd>
+</div>
+<div>
+<dt>Tokyo to Seoul</dt>
+<dd>1:55 am, Tue 15 Dec</dd>
+<dd class="sub">MM-809 from Haneda T3, landing Incheon at 4:40 am</dd>
+</div>
+<div>
+<dt>Home</dt>
+<dd>7:35 am, Mon 28 Dec</dd>
+<dd class="sub">AK621 + AK604 via Kuala Lumpur, landing Perth 3:40 am Tue 29 Dec</dd>
+</div>
+</dl>
+<div class="swatch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+</header>
+<nav class="nav" aria-label="Sections">
+<div class="wrap navin">
+<a href="#todo">Still to sort</a>
+<a href="#entry">Entry</a>
+<a href="#plan">The plan</a>
+<a href="#stay">Stay</a>
+<a href="#trains">Trains</a>
+<a href="#things">Things to do</a>
+<a href="#budget">Budget</a>
+<a href="#around">Getting around</a>
+</div>
+</nav>
+<main class="wrap">
+
+<section id="todo" class="money" aria-labelledby="h-todo">
+<h2 id="h-todo">Still to sort</h2>
+<p class="big">One night left to book: Seoul on 15 Dec, when you land at 4:40 am.</p>
+<p>Trains to book: Spacia Kinugawa on 6 Dec, Kinu 110 and Nozomi 255 on 9 Dec, and the Kyoto to Tokyo Shinkansen on 14 Dec. The Kegon 12 ticket leaves from Tobu Nikko, not Kinugawa Onsen, so swap or drop it. Agoda payments come out on 25 Nov, 27 Nov, 4 Dec and 9 Dec.</p>
+</section>
+
+<section id="entry" aria-labelledby="h-entry">
+<h2 id="h-entry">Entry</h2>
+<p class="intro">Australians don't need a visa for either country on this trip. Two free online forms make arrival quicker. Checked on 11 October 2026, so re-check the week before.</p>
+<ol class="steps">
+<li>
+<p class="when">Before 1 Dec</p>
+<h3><a href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener">Visit Japan Web</a></h3>
+<p><strong>Free.</strong> Up to 90 days visa-free. Register your passport and flight, fill in the immigration and customs forms, and screenshot the QR codes for Narita. Paper forms on arrival still work if you skip it.</p>
+<a class="btn" href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener">Open Visit Japan Web</a>
+</li>
+<li>
+<p class="when">12 to 14 Dec</p>
+<h3><a href="https://www.e-arrivalcard.go.kr/" target="_blank" rel="noopener">Korea e-Arrival card</a></h3>
+<p><strong>Free.</strong> Required for foreign visitors. Submit it online in the three days before landing. Do it in Kyoto, not at Haneda at midnight.</p>
+<a class="btn" href="https://www.e-arrivalcard.go.kr/" target="_blank" rel="noopener">Fill in the e-Arrival card</a>
+</li>
+<li>
+<p class="when">Nothing to do</p>
+<h3><a href="https://www.k-eta.go.kr/" target="_blank" rel="noopener">K-ETA</a></h3>
+<p><strong>Not needed.</strong> Australians are exempt from K-ETA until 31 December 2026, and you leave Seoul on 28 December. Skip any site that tries to sell you one.</p>
+<a class="btn" href="https://www.k-eta.go.kr/" target="_blank" rel="noopener">Official K-ETA site</a>
+</li>
+</ol>
+</section>
+
+<section id="plan" aria-labelledby="h-plan">
+<h2 id="h-plan">The plan, day by day</h2>
+<p class="intro">Travel days and bookings are fixed. Everything else is a suggestion. The ideas are in Things to do.</p>
+
+<h3 class="band">Melbourne</h3>
+<ol class="days">
+<li class="day"><div class="date"><span>Thu</span><b>26</b><span>Nov</span></div>
+<div class="dbody"><h3>Land in Melbourne</h3>
+<dl class="parts"><div><dt>6:30 am</dt><dd>Off the overnight from Perth at T4.</dd></div><div><dt>The plan</dt><dd>Apartment, breakfast, nap. Nothing else.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Fri</span><b>27</b><span>Nov</span></div>
+<div class="dbody"><h3>Melbourne week</h3>
+<dl class="parts"><div><dt>27 to 30 Nov</dt><dd>Laneway coffee, Fitzroy and Collingwood, South Melbourne Market, St Kilda at sunset.</dd></div><div><dt>Before you go</dt><dd>Repack with the winter layers on top.</dd></div></dl></div></li>
+</ol>
+
+<h3 class="band">Tokyo</h3>
+<ol class="days">
+<li class="day"><div class="date"><span>Tue</span><b>1</b><span>Dec</span></div>
+<div class="dbody"><h3>Fly to Tokyo</h3>
+<dl class="parts"><div><dt>Flight</dt><dd>JQ34 + JQ25 via Cairns into Narita T3.</dd></div><div><dt>Then</dt><dd>Narita Express to Shinjuku. Book &amp; Bed check-in from 4 pm.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Wed</span><b>2</b><span>Dec</span></div>
+<div class="dbody"><h3>Shinjuku</h3>
+<dl class="parts"><div><dt>Day</dt><dd>Free view from the Metropolitan Government Building, then Shinjuku Gyoen.</dd></div><div><dt>Night</dt><dd>Omoide Yokocho for yakitori.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Thu</span><b>3</b><span>Dec</span></div>
+<div class="dbody"><h3>Asakusa and Ueno</h3>
+<dl class="parts"><div><dt>Early</dt><dd>Senso-ji before the crowds.</dd></div><div><dt>Later</dt><dd>Ueno Park, Ameyoko market, Akihabara after dark.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Fri</span><b>4</b><span>Dec</span></div>
+<div class="dbody"><h3>Harajuku and Shibuya</h3>
+<dl class="parts"><div><dt>Day</dt><dd>Meiji Jingu, Takeshita Street, Omotesando.</dd></div><div><dt>Night</dt><dd>Shibuya Crossing and the view from Shibuya Sky.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Sat</span><b>5</b><span>Dec</span></div>
+<div class="dbody"><h3>Free day</h3>
+<dl class="parts"><div><dt>Pick one</dt><dd>teamLab, Yanaka old town or Shimokitazawa.</dd></div><div><dt>Tonight</dt><dd>Pack. Check-out is 11 am.</dd></div></dl></div></li>
+</ol>
+
+<h3 class="band">Kinugawa Onsen</h3>
+<ol class="days">
+<li class="day"><div class="date"><span>Sun</span><b>6</b><span>Dec</span></div>
+<div class="dbody"><h3>Train to the ryokan</h3>
+<dl class="parts"><div><dt>Train</dt><dd>Spacia Kinugawa from Shinjuku, about 2 hours, no changes.</dd></div><div><dt>3 pm</dt><dd>Check in at Matsuya. Onsen before dinner.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Mon</span><b>7</b><span>Dec</span></div>
+<div class="dbody"><h3>Nikko shrines</h3>
+<dl class="parts"><div><dt>Getting there</dt><dd>Tobu local to Tobu Nikko, about 35 minutes.</dd></div><div><dt>The plan</dt><dd>Tosho-gu, Shinkyo Bridge, Kanmangafuchi Abyss.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Tue</span><b>8</b><span>Dec</span></div>
+<div class="dbody"><h3>Slow day</h3>
+<dl class="parts"><div><dt>If it's clear</dt><dd>Bus up to Kegon Falls and Lake Chuzenji.</dd></div><div><dt>If not</dt><dd>River walk and a long soak.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Wed</span><b>9</b><span>Dec</span></div>
+<div class="dbody"><h3>Ryokan to Kyoto</h3>
+<dl class="parts"><div><dt>6:41 am</dt><dd>Kinu 110 from Kinugawa Onsen to Asakusa, arriving 8:49.</dd></div><div><dt>11:00 am</dt><dd>Nozomi 255 from Tokyo Station (Ginza Line from Asakusa), arriving Kyoto 1:15 pm. Check in at Continue Nijojo Kita from 3 pm.</dd></div></dl></div></li>
+</ol>
+
+<h3 class="band">Kyoto</h3>
+<ol class="days">
+<li class="day"><div class="date"><span>Thu</span><b>10</b><span>Dec</span></div>
+<div class="dbody"><h3>Fushimi Inari and Gion</h3>
+<dl class="parts"><div><dt>Dawn</dt><dd>The torii gates before the tour groups.</dd></div><div><dt>Afternoon</dt><dd>Gion, Hanamikoji, Nishiki Market.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Fri</span><b>11</b><span>Dec</span></div>
+<div class="dbody"><h3>Kanazawa day trip</h3>
+<dl class="parts"><div><dt>Train</dt><dd>Thunderbird to Tsuruga, then Hokuriku Shinkansen. About 2 hours each way. No luggage.</dd></div><div><dt>The plan</dt><dd>Kenroku-en, Omicho Market, Higashi Chaya.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Sat</span><b>12</b><span>Dec</span></div>
+<div class="dbody"><h3>Arashiyama</h3>
+<dl class="parts"><div><dt>Morning</dt><dd>Bamboo grove early, then Tenryu-ji.</dd></div><div><dt>Afternoon</dt><dd>Walk the Hozugawa river, then back to Nijo for dinner.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Sun</span><b>13</b><span>Dec</span></div>
+<div class="dbody"><h3>East Kyoto</h3>
+<dl class="parts"><div><dt>Day</dt><dd>Kiyomizu-dera, Philosopher's Path, Nanzen-ji.</dd></div><div><dt>Tonight</dt><dd>Fill in the Korea e-Arrival card.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Mon</span><b>14</b><span>Dec</span></div>
+<div class="dbody"><h3>Back to Tokyo, then the airport</h3>
+<dl class="parts"><div><dt>10 am</dt><dd>Check out, Shinkansen to Tokyo.</dd></div><div><dt>3 pm</dt><dd>Nine Hours Shinjuku-North. Shower and sleep.</dd></div><div><dt>About 10 pm</dt><dd>JR to Shinagawa, Keikyu to Haneda T3. Trains stop around midnight.</dd></div></dl></div></li>
+</ol>
+
+<h3 class="band">Seoul</h3>
+<ol class="days">
+<li class="day"><div class="date"><span>Tue</span><b>15</b><span>Dec</span></div>
+<div class="dbody"><h3>Land at dawn</h3>
+<dl class="parts"><div><dt>4:40 am</dt><dd>Incheon. Coffee in arrivals until the trains start.</dd></div><div><dt>No bed yet</dt><dd>GOYOO starts on the 16th, so tonight still needs a booking.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Wed</span><b>16</b><span>Dec</span></div>
+<div class="dbody"><h3>Gangnam base</h3>
+<dl class="parts"><div><dt>4 pm</dt><dd>Check in at GOYOO INN.</dd></div><div><dt>Evening</dt><dd>COEX and the Starfield Library.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Thu</span><b>17</b><span>Dec</span></div>
+<div class="dbody"><h3>Seoul week</h3>
+<dl class="parts"><div><dt>17 to 23 Dec</dt><dd>Gyeongbokgung and Bukchon, Myeongdong, Hongdae and Yeonnam-dong, Seongsu cafes, Gwangjang Market, a jjimjilbang night.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Thu</span><b>24</b><span>Dec</span></div>
+<div class="dbody"><h3>Christmas</h3>
+<dl class="parts"><div><dt>Eve</dt><dd>Lotte World Tower and the Cheonggyecheon lights.</dd></div><div><dt>Christmas Day</dt><dd>Korean BBQ lunch.</dd></div></dl></div></li>
+<li class="day"><div class="date"><span>Mon</span><b>28</b><span>Dec</span></div>
+<div class="dbody"><h3>Fly home</h3>
+<dl class="parts"><div><dt>About 4:30 am</dt><dd>Taxi or the early airport bus from Gangnam to Incheon.</dd></div><div><dt>7:35 am</dt><dd>AirAsia via Kuala Lumpur. Perth at 3:40 am on the 29th.</dd></div></dl></div></li>
+</ol>
+</section>
+
+<section id="stay" aria-labelledby="h-stay">
+<h2 id="h-stay">Where to stay</h2>
+<p class="intro">Six stays booked. Only the arrival night in Seoul is still open. Tap a photo to open the place in Maps or on Booking.com.</p>
+<ul class="villas">
+
+<li class="villa"><a class="pic" href="https://www.booking.com/hotel/au/apartment-in-southbank-southbank.en-gb.html" target="_blank" rel="noopener" aria-label="Open Apartment in Southbank on Booking.com"><img src="photos/stay_melbourne.jpg" alt="Living room of the Southbank apartment with a city view" loading="lazy" width="600" height="400"></a>
+<div class="vbody"><div class="tags"><span class="tag fav">Booked and paid</span></div>
+<h3><a href="https://www.booking.com/hotel/au/apartment-in-southbank-southbank.en-gb.html" target="_blank" rel="noopener">Apartment in Southbank</a></h3>
+<p class="price"><strong>A$880</strong><span>for 5 nights</span></p>
+<dl><div><dt>Dates</dt><dd>26 Nov to 1 Dec</dd></div><div><dt>Area</dt><dd>Southbank, Melbourne</dd></div><div><dt>Via</dt><dd>Booking.com</dd></div></dl>
+<a class="btn" href="https://www.booking.com/hotel/au/apartment-in-southbank-southbank.en-gb.html" target="_blank" rel="noopener">View on Booking.com</a></div></li>
+
+<li class="villa"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Book+And+Bed+Tokyo+Shinjuku" target="_blank" rel="noopener" aria-label="Open Book and Bed Tokyo Shinjuku in Maps"><img src="photos/stay_bookandbed.jpg" alt="Bookshelf lounge at Book and Bed Tokyo Shinjuku" loading="lazy" width="600" height="400"></a>
+<div class="vbody"><div class="tags"><span class="tag fav">Booked</span></div>
+<h3><a href="https://www.google.com/maps/search/?api=1&amp;query=Book+And+Bed+Tokyo+Shinjuku" target="_blank" rel="noopener">Book &amp; Bed Tokyo Shinjuku</a></h3>
+<p class="price"><strong>~A$392</strong><span>CNY 1,806 for 5 nights</span></p>
+<dl><div><dt>Dates</dt><dd>1 to 6 Dec, in 4 pm, out 11 am</dd></div><div><dt>Room</dt><dd>Single bunk, breakfast included</dd></div><div><dt>Area</dt><dd>Kabukicho APM Bldg 8F</dd></div><div><dt>Pay by</dt><dd>25 Nov</dd></div></dl>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Book+And+Bed+Tokyo+Shinjuku" target="_blank" rel="noopener">Open in Maps</a></div></li>
+
+<li class="villa"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Hana+no+Yado+Matsuya+Kinugawa+Onsen" target="_blank" rel="noopener" aria-label="Open Hana no Yado Matsuya in Maps"><img src="photos/stay_matsuya.jpg" alt="Entrance of Hana no Yado Matsuya ryokan under blossom" loading="lazy" width="600" height="400"></a>
+<div class="vbody"><div class="tags"><span class="tag fav">Booked</span></div>
+<h3><a href="https://www.google.com/maps/search/?api=1&amp;query=Hana+no+Yado+Matsuya+Kinugawa+Onsen" target="_blank" rel="noopener">Hana no Yado Matsuya</a></h3>
+<p class="price"><strong>~A$289</strong><span>JPY 29,394 for 3 nights, plus a small bathing tax</span></p>
+<dl><div><dt>Dates</dt><dd>6 to 9 Dec, in 3 pm, out 10 am</dd></div><div><dt>Room</dt><dd>River-view tatami room, room only</dd></div><div><dt>Station</dt><dd>Kinugawa Onsen</dd></div><div><dt>Pay by</dt><dd>27 Nov</dd></div></dl>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hana+no+Yado+Matsuya+Kinugawa+Onsen" target="_blank" rel="noopener">Open in Maps</a></div></li>
+
+<li class="villa"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Continue+Nijojo+Kita+Kyoto" target="_blank" rel="noopener" aria-label="Open Continue Nijojo Kita in Maps"><img src="photos/stay_continue.jpg" alt="Front of Continue Nijojo Kita in Kyoto" loading="lazy" width="600" height="400"></a>
+<div class="vbody"><div class="tags"><span class="tag fav">Booked · extended</span></div>
+<h3><a href="https://www.google.com/maps/search/?api=1&amp;query=Continue+Nijojo+Kita+Kyoto" target="_blank" rel="noopener">Continue Nijojo Kita</a></h3>
+<p class="price"><strong>~A$230</strong><span>JPY 23,760 for 5 nights</span></p>
+<dl><div><dt>Dates</dt><dd>9 to 14 Dec, in 3 pm, out 10 am</dd></div><div><dt>Room</dt><dd>Double room, shared bathroom</dd></div><div><dt>Area</dt><dd>Kamigyo-ku, by Nijo Castle</dd></div><div><dt>Pay by</dt><dd>4 Dec</dd></div></dl>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Continue+Nijojo+Kita+Kyoto" target="_blank" rel="noopener">Open in Maps</a></div></li>
+
+<li class="villa"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=9h+nine+hours+Shinjuku-North" target="_blank" rel="noopener" aria-label="Open 9h nine hours Shinjuku-North in Maps"><img src="photos/stay_ninehours.jpg" alt="Capsule pods at nine hours" loading="lazy" width="600" height="400"></a>
+<div class="vbody"><div class="tags"><span class="tag fav">Booked</span></div>
+<h3><a href="https://www.google.com/maps/search/?api=1&amp;query=9h+nine+hours+Shinjuku-North" target="_blank" rel="noopener">9h nine hours Shinjuku-North</a></h3>
+<p class="price"><strong>~A$66</strong><span>1 capsule night</span></p>
+<dl><div><dt>Dates</dt><dd>14 to 15 Dec, in from 3 pm</dd></div><div><dt>Room</dt><dd>Female-only capsule</dd></div><div><dt>Area</dt><dd>Hyakunincho, near Shin-Okubo</dd></div><div><dt>Leave</dt><dd>About 10 pm for Haneda</dd></div></dl>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=9h+nine+hours+Shinjuku-North" target="_blank" rel="noopener">Open in Maps</a></div></li>
+
+<li class="villa"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Incheon+International+Airport" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">서울</span></a>
+<div class="vbody"><div class="tags"><span class="tag over">To book</span></div>
+<h3>Seoul, arrival night</h3>
+<p class="price"><strong>TBC</strong><span>1 night</span></p>
+<dl><div><dt>Date</dt><dd>15 Dec</dd></div><div><dt>Why</dt><dd>You land at 4:40 am and GOYOO starts on the 16th. A place that allows early check-in would be ideal.</dd></div></dl></div></li>
+
+<li class="villa"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=GOYOO+INN+%26+CABINS+Gangnam" target="_blank" rel="noopener" aria-label="Open GOYOO INN and CABINS in Maps"><img src="photos/stay_goyoo.jpg" alt="Lobby and lounge at GOYOO INN and CABINS" loading="lazy" width="600" height="400"></a>
+<div class="vbody"><div class="tags"><span class="tag fav">Booked</span></div>
+<h3><a href="https://www.google.com/maps/search/?api=1&amp;query=GOYOO+INN+%26+CABINS+Gangnam" target="_blank" rel="noopener">GOYOO INN &amp; CABINS</a></h3>
+<p class="price"><strong>~A$991</strong><span>KRW 935,171 for 12 nights</span></p>
+<dl><div><dt>Dates</dt><dd>16 to 28 Dec, in 4 pm, out 11 am</dd></div><div><dt>Room</dt><dd>Women-only cabin, no window</dd></div><div><dt>Area</dt><dd>Teheran-ro 77-gil, Gangnam</dd></div><div><dt>Pay by</dt><dd>9 Dec</dd></div></dl>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=GOYOO+INN+%26+CABINS+Gangnam" target="_blank" rel="noopener">Open in Maps</a></div></li>
+</ul>
+</section>
+
+<section id="trains" aria-labelledby="h-trains">
+<h2 id="h-trains">Trains</h2>
+<p class="intro">The long legs in Japan. Klook prices are from the listings you showed me. The rest are estimates. A Suica card covers the metro and local trains.</p>
+<ul class="rows">
+<li><div class="rmain"><h4>Narita T3 to Shinjuku</h4><p class="meta"><span>Narita Express</span><span>Tue 1 Dec</span><span>About 80 min, any train</span></p></div><p class="cost">About ¥3,250 · ~A$32</p></li>
+<li><div class="rmain"><h4>Shinjuku to Kinugawa Onsen</h4><p class="meta"><span>Spacia Kinugawa</span><span>Sun 6 Dec</span><span>About 2 hrs direct, reserved seat</span></p></div><p class="cost">About A$40 · to book</p></li>
+<li><div class="rmain"><h4>Kinugawa Onsen to Asakusa</h4><p class="meta"><span>Kinu 110, Tobu</span><span>Wed 9 Dec, 6:41 to 8:49 am</span><span>Replaces the Kegon 12 from Tobu Nikko</span></p></div><p class="cost">A$16.67 · Klook</p></li>
+<li><div class="rmain"><h4>Asakusa to Tokyo Station</h4><p class="meta"><span>Ginza Line to Nihonbashi, short walk</span><span>About 20 min</span><span>Two hours of buffer</span></p></div><p class="cost">¥210 · Suica</p></li>
+<li><div class="rmain"><h4>Tokyo to Kyoto</h4><p class="meta"><span>Nozomi 255</span><span>Wed 9 Dec, 11:00 am to 1:15 pm</span><span>Changeable ticket</span></p></div><p class="cost">A$131.43 · Klook</p></li>
+<li><div class="rmain"><h4>Kyoto to Kanazawa and back</h4><p class="meta"><span>Thunderbird + Hokuriku Shinkansen</span><span>Fri 11 Dec</span><span>Change at Tsuruga, about 2 hrs each way</span></p></div><p class="cost">About A$170 return</p></li>
+<li><div class="rmain"><h4>Kyoto to Tokyo</h4><p class="meta"><span>Shinkansen Nozomi</span><span>Mon 14 Dec, late morning</span><span>Then JR to Shinjuku</span></p></div><p class="cost">About A$135 · to book</p></li>
+<li><div class="rmain"><h4>Shinjuku to Haneda T3</h4><p class="meta"><span>JR to Shinagawa, then Keikyu</span><span>Mon 14 Dec, leave about 10 pm</span><span>About 45 min</span></p></div><p class="cost">About ¥500 · Suica</p></li>
+</ul>
+</section>
+
+<section id="things" aria-labelledby="h-things">
+<h2 id="h-things">Things to do</h2>
+<p class="intro">A short list for each place. Most temples and shrines take cash only.</p>
+
+<h3 class="band">Tokyo</h3>
+<ul class="cards">
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Senso-ji" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">浅草</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Senso-ji" target="_blank" rel="noopener">Senso-ji</a></h4><p class="cost">Free</p><p class="meta"><span>Asakusa</span><span>Go before 8 am</span></p><p>Tokyo's oldest temple, with the Nakamise snack street leading up to it.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Metropolitan+Government+Building+observatory" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">都庁</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Metropolitan+Government+Building+observatory" target="_blank" rel="noopener">Metropolitan Government Building</a></h4><p class="cost">Free</p><p class="meta"><span>Shinjuku</span><span>Clear days you can see Fuji</span></p><p>A 45th-floor view over the city, ten minutes' walk from Book &amp; Bed.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Meiji+Jingu" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">明治</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Meiji+Jingu" target="_blank" rel="noopener">Meiji Jingu</a></h4><p class="cost">Free</p><p class="meta"><span>Harajuku</span><span>Morning</span></p><p>A shrine in a forest right next to Takeshita Street.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Omoide+Yokocho" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">横丁</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Omoide+Yokocho" target="_blank" rel="noopener">Omoide Yokocho</a></h4><p class="meta"><span>Shinjuku</span><span>Evening</span></p><p>Tiny lantern-lit yakitori stalls by Shinjuku Station. Most seat about eight people.</p></div></li>
+</ul>
+
+<h3 class="band">Kinugawa and Nikko</h3>
+<ul class="cards">
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Nikko+Toshogu" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">東照宮</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Nikko+Toshogu" target="_blank" rel="noopener">Nikko Tosho-gu</a></h4><p class="meta"><span>Nikko</span><span>Half a day</span></p><p>A heavily carved, gold-leafed shrine complex in the cedar forest. Home of the three wise monkeys.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Kanmangafuchi+Abyss" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">憾満</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Kanmangafuchi+Abyss" target="_blank" rel="noopener">Kanmangafuchi Abyss</a></h4><p class="cost">Free</p><p class="meta"><span>Nikko</span><span>20 min walk from Shinkyo</span></p><p>A riverside path lined with about 70 stone Jizo statues in red caps.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Kegon+Falls" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">華厳</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Kegon+Falls" target="_blank" rel="noopener">Kegon Falls</a></h4><p class="meta"><span>Lake Chuzenji</span><span>Bus up the mountain</span></p><p>A 97 m waterfall. It can be icy in December, so check the weather first.</p></div></li>
+</ul>
+
+<h3 class="band">Kyoto and Kanazawa</h3>
+<ul class="cards">
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Fushimi+Inari+Taisha" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">伏見</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Fushimi+Inari+Taisha" target="_blank" rel="noopener">Fushimi Inari</a></h4><p class="cost">Free</p><p class="meta"><span>South Kyoto</span><span>Dawn</span></p><p>Thousands of orange torii up the mountain. Crowds thin out past the halfway point.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">嵐山</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener">Arashiyama bamboo grove</a></h4><p class="cost">Free</p><p class="meta"><span>West Kyoto</span><span>Before 8 am</span></p><p>Pair it with Tenryu-ji's garden next door.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Kenrokuen" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">兼六園</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Kenrokuen" target="_blank" rel="noopener">Kenroku-en</a></h4><p class="meta"><span>Kanazawa</span><span>Day trip, 11 Dec</span></p><p>One of Japan's three great gardens. In December the pines are tied with rope cones against the snow.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Omicho+Market+Kanazawa" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">近江町</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Omicho+Market+Kanazawa" target="_blank" rel="noopener">Omicho Market</a></h4><p class="meta"><span>Kanazawa</span><span>Lunch</span></p><p>Kaisendon seafood bowls. Winter is crab season on this coast.</p></div></li>
+</ul>
+
+<h3 class="band">Seoul</h3>
+<ul class="cards">
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Gyeongbokgung+Palace" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">경복궁</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Gyeongbokgung+Palace" target="_blank" rel="noopener">Gyeongbokgung</a></h4><p class="meta"><span>Jongno</span><span>Morning</span></p><p>The main palace, with Bukchon's hanok lanes up the hill behind it.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Starfield+Library+COEX" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">별마당</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Starfield+Library+COEX" target="_blank" rel="noopener">Starfield Library</a></h4><p class="cost">Free</p><p class="meta"><span>COEX, Gangnam</span><span>Near GOYOO</span></p><p>Two-storey bookshelves inside the COEX mall. It usually has a big Christmas display.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Gwangjang+Market" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">광장</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Gwangjang+Market" target="_blank" rel="noopener">Gwangjang Market</a></h4><p class="meta"><span>Jongno</span><span>Lunch</span></p><p>Bindaetteok, mayak gimbap and knife noodles at the stalls.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Seongsu-dong+Seoul" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">성수</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Seongsu-dong+Seoul" target="_blank" rel="noopener">Seongsu</a></h4><p class="meta"><span>East Seoul</span><span>Afternoon</span></p><p>Converted factories, cafes and brand pop-ups. Good for content.</p></div></li>
+</ul>
+</section>
+
+<section id="budget" aria-labelledby="h-budget">
+<h2 id="h-budget">Budget</h2>
+<p class="intro">What's booked so far, in Australian dollars. Rates used: CNY 1 = A$0.217, JPY 1 = A$0.0097, USD 1 = A$1.54, KRW 1 = A$0.00106.</p>
+<ul class="totals">
+<li><span>Flights</span><b>A$1,755</b></li>
+<li><span>Stays</span><b>~A$2,848</b></li>
+<li><span>eSIMs</span><b>~A$106</b></li>
+<li><span>Booked so far</span><b>~A$4,709</b></li>
+</ul>
+<div class="scroll">
+<table>
+<thead><tr><th>Item</th><th>Local price</th><th>A$</th></tr></thead>
+<tbody>
+<tr><th>Melbourne to Tokyo<small>Jetstar via Cairns, plus 16,645 Qantas points</small></th><td>—</td><td>794.27</td></tr>
+<tr><th>Haneda to Incheon<small>MM-809</small></th><td>—</td><td>204.78</td></tr>
+<tr><th>Incheon to Perth<small>AirAsia via Kuala Lumpur</small></th><td>—</td><td>755.83</td></tr>
+<tr><th>Apartment in Southbank<small>5 nights, paid</small></th><td>—</td><td>880.00</td></tr>
+<tr><th>Book &amp; Bed Tokyo Shinjuku<small>5 nights</small></th><td>CNY 1,806</td><td>~392</td></tr>
+<tr><th>Hana no Yado Matsuya<small>3 nights</small></th><td>JPY 29,394</td><td>~289</td></tr>
+<tr><th>Continue Nijojo Kita<small>5 nights</small></th><td>JPY 23,760</td><td>~230</td></tr>
+<tr><th>9h nine hours Shinjuku-North<small>1 night</small></th><td>USD ~44</td><td>~66</td></tr>
+<tr><th>GOYOO INN &amp; CABINS<small>12 nights</small></th><td>KRW 935,171</td><td>~991</td></tr>
+<tr><th>Klook eSIMs<small>Asia 28 days + Indonesia 5 days</small></th><td>—</td><td>~106</td></tr>
+</tbody>
+<tfoot><tr><th>Total</th><td></td><td>~4,709</td></tr></tfoot>
+</table>
+</div>
+<p class="intro">Not in this total: Perth to Melbourne (paid), the Seoul arrival night and about A$525 of trains. Agoda charges in yen on the payment date, so the A$ amounts can move a little.</p>
+</section>
+
+<section id="around" aria-labelledby="h-around">
+<h2 id="h-around">Getting around</h2>
+<p class="intro">The eSIM covers Japan and Korea, so maps work from the moment you land.</p>
+<ul class="cards">
+<li class="card"><a class="pic" href="https://www.jreast.co.jp/multi/en/pass/suica.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">S</span></a><div class="cbody"><h4><a href="https://www.jreast.co.jp/multi/en/pass/suica.html" target="_blank" rel="noopener">Suica</a></h4><p class="meta"><span>Japan</span><span>Trains, buses, konbini</span></p><p>Add it to Apple Wallet before you fly and top up with your card. It works on every metro and local train in this plan.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Haneda+Airport+Terminal+3" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">羽田</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Haneda+Airport+Terminal+3" target="_blank" rel="noopener">Haneda at midnight</a></h4><p class="meta"><span>14 Dec</span><span>Terminal 3</span></p><p>Trains stop around midnight, so take one that gets you in by about 11 pm. Terminal 3 stays open overnight.</p></div></li>
+<li class="card"><a class="pic" href="https://map.naver.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">N</span></a><div class="cbody"><h4><a href="https://map.naver.com/" target="_blank" rel="noopener">Naver Map and T-money</a></h4><p class="meta"><span>Korea</span><span>Download before Seoul</span></p><p>Google Maps can't do walking directions in Korea, so use Naver. Buy a T-money card at an Incheon convenience store for the subway and buses.</p></div></li>
+<li class="card"><a class="pic" href="https://www.google.com/maps/search/?api=1&amp;query=Incheon+International+Airport+Terminal+1" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">인천</span></a><div class="cbody"><h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Incheon+International+Airport+Terminal+1" target="_blank" rel="noopener">Incheon, both ways</a></h4><p class="meta"><span>15 Dec arrival, 28 Dec departure</span></p><p>You land before the first AREX train, so wait in arrivals. For the 7:35 am flight home, book a taxi or the earliest airport bus from Gangnam the night before.</p></div></li>
+<li class="card"><a class="pic" href="https://www.global-yamato.com/en/hands-free-travel/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph mono">宅急便</span></a><div class="cbody"><h4><a href="https://www.global-yamato.com/en/hands-free-travel/" target="_blank" rel="noopener">Sending the suitcase ahead</a></h4><p class="meta"><span>Optional</span><span>About a day in transit</span></p><p>Yamato can send your case from Book &amp; Bed to the Kyoto hotel, so you only take a small bag to the ryokan. Ask at reception the day before.</p></div></li>
+</ul>
+</section>
+
+</main>
+<footer class="wrap foot">
+<p>Bookings are from Agoda, Jetstar, AirAsia and Klook confirmations. Train times are from the Klook listings for 9 Dec. Entry rules checked on 11 October 2026 against <a href="https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gl/technical/tax-alerts/documents/korea-extends-temporary-electronic-travel-authorization-exemption-until-31-december-2026.pdf" target="_blank" rel="noopener">EY on the K-ETA extension</a> and the <a href="https://au.trip.com/guide/info/korea-arrival-card.html" target="_blank" rel="noopener">Trip.com e-Arrival guide</a>. Prices marked "about" are estimates.</p>
+</footer>
+</body>
+</html>

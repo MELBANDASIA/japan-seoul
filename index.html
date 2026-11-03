@@ -232,6 +232,14 @@ tfoot th,tfoot td{background:var(--rose);color:var(--white)}
 .legsteps li::before{content:counter(ls);position:absolute;left:0;top:.05rem;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--sand);color:var(--ink);font-size:.78rem;font-weight:600;display:grid;place-items:center}
 .legsteps b{color:var(--ink);font-weight:600}
 .legtip{font-size:.88rem;color:var(--ink);background:var(--blush);border-radius:.8rem;padding:.55rem .8rem}
+
+/* daily budget */
+.daytbl{min-width:0}
+.daytbl th,.daytbl td{text-align:left;padding:.6rem .8rem}
+.daytbl th:first-child{white-space:nowrap}
+.daytbl td:nth-child(2){white-space:nowrap;font-weight:600;color:var(--mauve)}
+.daytbl tfoot td:nth-child(2){color:var(--white)}
+.daytbl td:last-child{font-size:.85rem;color:var(--mocha)}
 </style>
 </head>
 <body>
@@ -270,7 +278,7 @@ tfoot th,tfoot td{background:var(--rose);color:var(--white)}
 </dl>
 <nav class="guide" aria-label="Travel guide">
 <p class="gh"><span class="gt">Travel Guide</span><span class="gs">Tap the icon</span></p>
-<ul><li><a href="#todo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z"/><path d="M9 9l1.5 1.5L13 8M9 15h6"/></svg><span>Still to sort</span></a></li><li><a href="#entry"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="1.5"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/></svg><span>Entry</span></a></li><li><a href="#plan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 10h16M8 3v4M16 3v4M8 14h2M12 14h2M8 17h2"/></svg><span>The plan</span></a></li><li><a href="#stay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg><span>Stay</span></a></li><li><a href="#trains"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 10h12M9 14h.01M15 14h.01M8 21l2-4M16 21l-2-4"/></svg><span>Stay to stay</span></a></li><li><a href="#book"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8a2 2 0 002-2h12a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 00-2 2H6a2 2 0 00-2-2v-2a2 2 0 000-4z"/><path d="M10 7v10" stroke-dasharray="1.5 1.5"/></svg><span>Book ahead</span></a></li><li><a href="#tiktok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4v10.5a3 3 0 11-3-3"/><path d="M13 4c.5 2.5 2.5 4 5 4"/></svg><span>TikTok list</span></a></li><li><a href="#things"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8M5 3v4a2 2 0 004 0V3M7 11v10M17 3c-2 0-3 3-3 6s1 4 3 4v8"/></svg><span>Eat, shop, see</span></a></li><li><a href="#parks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 7h-3l4 6H6l4-6H7z"/><path d="M12 16v5"/></svg><span>Parks</span></a></li><li><a href="#budget"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9v.01M18 15v.01"/></svg><span>Budget</span></a></li><li><a href="#around"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2z"/><path d="M9 4v14M15 6v14"/></svg><span>Getting around</span></a></li></ul>
+<ul><li><a href="#todo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z"/><path d="M9 9l1.5 1.5L13 8M9 15h6"/></svg><span>Still to sort</span></a></li><li><a href="#entry"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="1.5"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/></svg><span>Entry</span></a></li><li><a href="#plan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 10h16M8 3v4M16 3v4M8 14h2M12 14h2M8 17h2"/></svg><span>The plan</span></a></li><li><a href="#stay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg><span>Stay</span></a></li><li><a href="#trains"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 10h12M9 14h.01M15 14h.01M8 21l2-4M16 21l-2-4"/></svg><span>Stay to stay</span></a></li><li><a href="#book"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8a2 2 0 002-2h12a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 00-2 2H6a2 2 0 00-2-2v-2a2 2 0 000-4z"/><path d="M10 7v10" stroke-dasharray="1.5 1.5"/></svg><span>Book ahead</span></a></li><li><a href="#tiktok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4v10.5a3 3 0 11-3-3"/><path d="M13 4c.5 2.5 2.5 4 5 4"/></svg><span>TikTok list</span></a></li><li><a href="#things"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8M5 3v4a2 2 0 004 0V3M7 11v10M17 3c-2 0-3 3-3 6s1 4 3 4v8"/></svg><span>Eat, shop, see</span></a></li><li><a href="#parks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 7h-3l4 6H6l4-6H7z"/><path d="M12 16v5"/></svg><span>Parks</span></a></li><li><a href="#budget"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9v.01M18 15v.01"/></svg><span>Budget</span></a></li><li><a href="#daily"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 2v4M16 2v4M4 10h16M9 14h2M13 14h2M9 17h2"/></svg><span>Daily budget</span></a></li><li><a href="#around"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2z"/><path d="M9 4v14M15 6v14"/></svg><span>Getting around</span></a></li></ul>
 </nav>
 </div>
 </header>
@@ -284,7 +292,7 @@ tfoot th,tfoot td{background:var(--rose);color:var(--white)}
 <a href="#book">Book ahead</a>
 <a href="#tiktok">TikTok list</a>
 <a href="#things">Eat, shop, see</a><a href="#parks">Parks</a>
-<a href="#budget">Budget</a>
+<a href="#budget">Budget</a><a href="#daily">Daily budget</a>
 <a href="#around">Getting around</a>
 </div>
 </nav>
@@ -909,6 +917,79 @@ tfoot th,tfoot td{background:var(--rose);color:var(--white)}
 </table>
 </div>
 <p class="intro">Not in this total: Perth to Melbourne (paid), the Spacia Kinugawa train on 6 Dec and the Kanazawa day-trip tickets. All stays are now paid in A$, so those numbers are final.</p>
+</section>
+
+<section id="daily" aria-labelledby="h-daily">
+<h2 id="h-daily">Daily budget</h2>
+<p class="intro">Your spending limit for each day: food, transport and small extras. Flights, stays and booked trains are already paid. Over one day? Take it off the next.</p>
+<ul class="totals">
+<li><span>Melbourne</span><b>A$325</b></li>
+<li><span>Japan</span><b>A$715</b></li>
+<li><span>Korea</span><b>A$590</b></li>
+<li><span>Fun fund and buffer</span><b>A$300</b></li>
+</ul>
+<h3 class="band">Melbourne</h3>
+<div class="scroll">
+<table class="daytbl">
+<thead><tr><th>Day</th><th>Limit</th><th>Covers</th></tr></thead>
+<tbody>
+<tr><th>Thu 26 Nov</th><td>A$65</td><td>Uber or DiDi from the airport (split with Maya), breakfast, groceries</td></tr>
+<tr><th>Fri 27 Nov</th><td>A$50</td><td>Cafés and lunch, free city-centre trams</td></tr>
+<tr><th>Sat 28 Nov</th><td>A$70</td><td>Julietta dinner night</td></tr>
+<tr><th>Sun 29 Nov</th><td>A$50</td><td>Light day before J. Cole. Snacks and water at the arena add up</td></tr>
+<tr><th>Mon 30 Nov</th><td>A$50</td><td>Shopping and cafés</td></tr>
+<tr><th>Tue 1 Dec</th><td>A$40</td><td>Breakfast and the airport ride</td></tr>
+</tbody>
+<tfoot><tr><th>Total</th><td>A$325</td><td></td></tr></tfoot>
+</table>
+</div>
+<h3 class="band">Japan</h3>
+<div class="scroll">
+<table class="daytbl">
+<thead><tr><th>Day</th><th>Limit</th><th>Covers</th></tr></thead>
+<tbody>
+<tr><th>Tue 1 Dec</th><td>A$30</td><td>Dinner after landing. Narita Express already paid</td></tr>
+<tr><th>Wed 2 Dec</th><td>A$55</td><td>Food and Suica top-up</td></tr>
+<tr><th>Thu 3 Dec</th><td>A$65</td><td>Includes the kintsugi workshop</td></tr>
+<tr><th>Fri 4 Dec</th><td>A$55</td><td>Food and trains</td></tr>
+<tr><th>Sat 5 Dec</th><td>A$55</td><td>Food and trains</td></tr>
+<tr><th>Sun 6 Dec</th><td>A$45</td><td>Subway to Asakusa, taxi to Matsuya. SPACIA X paid</td></tr>
+<tr><th>Mon 7 Dec</th><td>A$50</td><td>Food, plus a NIKKO PASS if you do a day trip</td></tr>
+<tr><th>Tue 8 Dec</th><td>A$45</td><td>Slow onsen day</td></tr>
+<tr><th>Wed 9 Dec</th><td>A$45</td><td>Taxis and food. Trains paid</td></tr>
+<tr><th>Thu 10 Dec</th><td>A$60</td><td>Kyoto: tea ceremony or kimono if you pick one</td></tr>
+<tr><th>Fri 11 Dec</th><td>A$55</td><td>Food and buses</td></tr>
+<tr><th>Sat 12 Dec</th><td>A$55</td><td>Sagano train is about A$8</td></tr>
+<tr><th>Sun 13 Dec</th><td>A$55</td><td>Funaoka Onsen is about A$5</td></tr>
+<tr><th>Mon 14 Dec</th><td>A$45</td><td>Food, trains paid, monorail to Haneda</td></tr>
+</tbody>
+<tfoot><tr><th>Total</th><td>A$715</td><td></td></tr></tfoot>
+</table>
+</div>
+<h3 class="band">Korea</h3>
+<div class="scroll">
+<table class="daytbl">
+<thead><tr><th>Day</th><th>Limit</th><th>Covers</th></tr></thead>
+<tbody>
+<tr><th>Tue 15 Dec</th><td>A$35</td><td>WOWPASS, AREX to the city, breakfast</td></tr>
+<tr><th>Wed 16 Dec</th><td>A$45</td><td>Food and subway</td></tr>
+<tr><th>Thu 17 Dec</th><td>A$45</td><td>Food and subway</td></tr>
+<tr><th>Fri 18 Dec</th><td>A$45</td><td>Secret Garden tour is about A$9</td></tr>
+<tr><th>Sat 19 Dec</th><td>A$45</td><td>Hanbok rental is about A$11</td></tr>
+<tr><th>Sun 20 Dec</th><td>A$45</td><td>Food and subway</td></tr>
+<tr><th>Mon 21 Dec</th><td>A$40</td><td>Move to Gangnam on the subway</td></tr>
+<tr><th>Tue 22 Dec</th><td>A$45</td><td>Food and subway</td></tr>
+<tr><th>Wed 23 Dec</th><td>A$45</td><td>Food and subway</td></tr>
+<tr><th>Thu 24 Dec</th><td>A$45</td><td>Christmas Eve treat</td></tr>
+<tr><th>Fri 25 Dec</th><td>A$45</td><td>Christmas Day</td></tr>
+<tr><th>Sat 26 Dec</th><td>A$45</td><td>Food and subway</td></tr>
+<tr><th>Sun 27 Dec</th><td>A$45</td><td>Last gifts at COEX</td></tr>
+<tr><th>Mon 28 Dec</th><td>A$20</td><td>6103 airport bus at 4:10 am</td></tr>
+</tbody>
+<tfoot><tr><th>Total</th><td>A$590</td><td></td></tr></tfoot>
+</table>
+</div>
+<p class="intro">Cheap habits: convenience-store breakfasts (7-Eleven, FamilyMart, Lawson, CU, GS25), tap Suica or WOWPASS instead of taxis, pay on your ING card to avoid fees, and keep the credit card for emergencies.</p>
 </section>
 
 <section id="around" aria-labelledby="h-around">
